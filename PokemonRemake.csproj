@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0DFB4A6-5D7D-452F-84AA-A6B2C4B89CB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokemonRemake</RootNamespace>
+    <AssemblyName>PokemonRemake</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\AI.cs" />
+    <Compile Include="AI\DefensiveAI.cs" />
+    <Compile Include="BattleManager.cs" />
+    <Compile Include="ChoseFight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoseFight.Designer.cs">
+      <DependentUpon>ChoseFight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoseSinglePokemon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoseSinglePokemon.Designer.cs">
+      <DependentUpon>ChoseSinglePokemon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemSelection.Designer.cs">
+      <DependentUpon>ItemSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\Collection\ItemAntidote.cs" />
+    <Compile Include="Items\Collection\ItemAwakening.cs" />
+    <Compile Include="Items\Collection\ItemBurn_Heal.cs" />
+    <Compile Include="Items\Collection\ItemFull_Heal.cs" />
+    <Compile Include="Items\Collection\ItemFull_Restore.cs" />
+    <Compile Include="Items\Collection\ItemIce_Heal.cs" />
+    <Compile Include="Items\Collection\ItemMax_Potion.cs" />
+    <Compile Include="Items\Collection\ItemParalyz_Heal.cs" />
+    <Compile Include="Items\Collection\ItemPotion.cs" />
+    <Compile Include="Items\Collection\ItemSuper_Potion.cs" />
+    <Compile Include="Items\Collection\ItemHyper_Potion.cs" />
+    <Compile Include="Items\Collection\ItemX_Accuracy.cs" />
+    <Compile Include="Items\Collection\ItemX_Attack.cs" />
+    <Compile Include="Items\Collection\ItemX_Defend.cs" />
+    <Compile Include="Items\Collection\ItemX_Special.cs" />
+    <Compile Include="Items\Collection\ItemX_Special_Defense.cs" />
+    <Compile Include="Items\Collection\ItemX_Speed.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\ItemManager.cs" />
+    <Compile Include="Pokemon\PokeBag.cs" />
+    <Compile Include="Pokemon\Pokemon.cs" />
+    <Compile Include="Pokemon\StatsManager.cs" />
+    <Compile Include="Pokemon\StatusManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AI\RandomAI.cs" />
+    <Compile Include="SwapPkmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SwapPkmForm.Designer.cs">
+      <DependentUpon>SwapPkmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TmHm\Collection\TmHmPsybeam.cs" />
+    <Compile Include="TmHm\Collection\TmHmAbsorb.cs" />
+    <Compile Include="TmHm\Collection\TmHmAcid.cs" />
+    <Compile Include="TmHm\Collection\TmHmAcid_Armor.cs" />
+    <Compile Include="TmHm\Collection\TmHmAgility.cs" />
+    <Compile Include="TmHm\Collection\TmHmAmnesia.cs" />
+    <Compile Include="TmHm\Collection\TmHmAurora_Beam.cs" />
+    <Compile Include="TmHm\Collection\TmHmBarrage.cs" />
+    <Compile Include="TmHm\Collection\TmHmBarrier.cs" />
+    <Compile Include="TmHm\Collection\TmHmBide.cs" />
+    <Compile Include="TmHm\Collection\TmHmBind.cs" />
+    <Compile Include="TmHm\Collection\TmHmBite.cs" />
+    <Compile Include="TmHm\Collection\TmHmBlizzard.cs" />
+    <Compile Include="TmHm\Collection\TmHmBody_Slam.cs" />
+    <Compile Include="TmHm\Collection\TmHmBonemerang.cs" />
+    <Compile Include="TmHm\Collection\TmHmBone_Club.cs" />
+    <Compile Include="TmHm\Collection\TmHmBubble.cs" />
+    <Compile Include="TmHm\Collection\TmHmBubble_Beam.cs" />
+    <Compile Include="TmHm\Collection\TmHmClamp.cs" />
+    <Compile Include="TmHm\Collection\TmHmComet_Punch.cs" />
+    <Compile Include="TmHm\Collection\TmHmConfuse_Ray.cs" />
+    <Compile Include="TmHm\Collection\TmHmConfusion.cs" />
+    <Compile Include="TmHm\Collection\TmHmConstrict.cs" />
+    <Compile Include="TmHm\Collection\TmHmConversion.cs" />
+    <Compile Include="TmHm\Collection\TmHmCounter.cs" />
+    <Compile Include="TmHm\Collection\TmHmCrabhammer.cs" />
+    <Compile Include="TmHm\Collection\TmHmCut.cs" />
+    <Compile Include="TmHm\Collection\TmHmDefense_Curl.cs" />
+    <Compile Include="TmHm\Collection\TmHmDig.cs" />
+    <Compile Include="TmHm\Collection\TmHmDisable.cs" />
+    <Compile Include="TmHm\Collection\TmHmDizzy_Punch.cs" />
+    <Compile Include="TmHm\Collection\TmHmDoubleEdge.cs" />
+    <Compile Include="TmHm\Collection\TmHmDouble_Kick.cs" />
+    <Compile Include="TmHm\Collection\TmHmDouble_Slap.cs" />
+    <Compile Include="TmHm\Collection\TmHmDouble_Team.cs" />
+    <Compile Include="TmHm\Collection\TmHmDragon_Rage.cs" />
+    <Compile Include="TmHm\Collection\TmHmDream_Eater.cs" />
+    <Compile Include="TmHm\Collection\TmHmDrill_Peck.cs" />
+    <Compile Include="TmHm\Collection\TmHmEarthquake.cs" />
+    <Compile Include="TmHm\Collection\TmHmEgg_bomb.cs" />
+    <Compile Include="TmHm\Collection\TmHmEmber.cs" />
+    <Compile Include="TmHm\Collection\TmHmExplosion.cs" />
+    <Compile Include="TmHm\Collection\TmHmFire_Blast.cs" />
+    <Compile Include="TmHm\Collection\TmHmFire_Punch.cs" />
+    <Compile Include="TmHm\Collection\TmHmFire_Spin.cs" />
+    <Compile Include="TmHm\Collection\TmHmFissure.cs" />
+    <Compile Include="TmHm\Collection\TmHmFlamethrower.cs" />
+    <Compile Include="TmHm\Collection\TmHmFlash.cs" />
+    <Compile Include="TmHm\Collection\TmHmFly.cs" />
+    <Compile Include="TmHm\Collection\TmHmFocus_Energy.cs" />
+    <Compile Include="TmHm\Collection\TmHmFury_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmFury_Swipes.cs" />
+    <Compile Include="TmHm\Collection\TmHmGlare.cs" />
+    <Compile Include="TmHm\Collection\TmHmGrowl.cs" />
+    <Compile Include="TmHm\Collection\TmHmGrowth.cs" />
+    <Compile Include="TmHm\Collection\TmHmGuillotine.cs" />
+    <Compile Include="TmHm\Collection\TmHmGust.cs" />
+    <Compile Include="TmHm\Collection\TmHmHarden.cs" />
+    <Compile Include="TmHm\Collection\TmHmHaze.cs" />
+    <Compile Include="TmHm\Collection\TmHmHeadbutt.cs" />
+    <Compile Include="TmHm\Collection\TmHmHigh_Jump_Kick.cs" />
+    <Compile Include="TmHm\Collection\TmHmHorn_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmHorn_Drill.cs" />
+    <Compile Include="TmHm\Collection\TmHmHydro_Pump.cs" />
+    <Compile Include="TmHm\Collection\TmHmHyper_Beam.cs" />
+    <Compile Include="TmHm\Collection\TmHmHyper_Fang.cs" />
+    <Compile Include="TmHm\Collection\TmHmHypnosis.cs" />
+    <Compile Include="TmHm\Collection\TmHmIce_Beam.cs" />
+    <Compile Include="TmHm\Collection\TmHmIce_Punch.cs" />
+    <Compile Include="TmHm\Collection\TmHmJump_Kick.cs" />
+    <Compile Include="TmHm\Collection\TmHmKarate_Chop.cs" />
+    <Compile Include="TmHm\Collection\TmHmKinesis.cs" />
+    <Compile Include="TmHm\Collection\TmHmLeech_Life.cs" />
+    <Compile Include="TmHm\Collection\TmHmLeech_Seed.cs" />
+    <Compile Include="TmHm\Collection\TmHmLeer.cs" />
+    <Compile Include="TmHm\Collection\TmHmLick.cs" />
+    <Compile Include="TmHm\Collection\TmHmLight_Screen.cs" />
+    <Compile Include="TmHm\Collection\TmHmLovely_Kiss.cs" />
+    <Compile Include="TmHm\Collection\TmHmLow_Kick.cs" />
+    <Compile Include="TmHm\Collection\TmHmMeditate.cs" />
+    <Compile Include="TmHm\Collection\TmHmMega_Drain.cs" />
+    <Compile Include="TmHm\Collection\TmHmMega_Kick.cs" />
+    <Compile Include="TmHm\Collection\TmHmMega_Punch.cs" />
+    <Compile Include="TmHm\Collection\TmHmMetronome.cs" />
+    <Compile Include="TmHm\Collection\TmHmMimic.cs" />
+    <Compile Include="TmHm\Collection\TmHmMinimize.cs" />
+    <Compile Include="TmHm\Collection\TmHmMirror_Move.cs" />
+    <Compile Include="TmHm\Collection\TmHmMist.cs" />
+    <Compile Include="TmHm\Collection\TmHmNight_Shade.cs" />
+    <Compile Include="TmHm\Collection\TmHmPay_day.cs" />
+    <Compile Include="TmHm\Collection\TmHmPeck.cs" />
+    <Compile Include="TmHm\Collection\TmHmPetal_Dance.cs" />
+    <Compile Include="TmHm\Collection\TmHmPin_Missile.cs" />
+    <Compile Include="TmHm\Collection\TmHmPoison_Gas.cs" />
+    <Compile Include="TmHm\Collection\TmHmPoison_Powder.cs" />
+    <Compile Include="TmHm\Collection\TmHmPoison_Sting.cs" />
+    <Compile Include="TmHm\Collection\TmHmPound.cs" />
+    <Compile Include="TmHm\Collection\TmHmPsychic.cs" />
+    <Compile Include="TmHm\Collection\TmHmPsywave.cs" />
+    <Compile Include="TmHm\Collection\TmHmQuick_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmRage.cs" />
+    <Compile Include="TmHm\Collection\TmHmRazor_Leaf.cs" />
+    <Compile Include="TmHm\Collection\TmHmRazor_Wind.cs" />
+    <Compile Include="TmHm\Collection\TmHmRecover.cs" />
+    <Compile Include="TmHm\Collection\TmHmReflect.cs" />
+    <Compile Include="TmHm\Collection\TmHmRest.cs" />
+    <Compile Include="TmHm\Collection\TmHmRoar.cs" />
+    <Compile Include="TmHm\Collection\TmHmRock_Slide.cs" />
+    <Compile Include="TmHm\Collection\TmHmRock_Throw.cs" />
+    <Compile Include="TmHm\Collection\TmHmRolling_Kick.cs" />
+    <Compile Include="TmHm\Collection\TmHmSand_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmScratch.cs" />
+    <Compile Include="TmHm\Collection\TmHmScreech.cs" />
+    <Compile Include="TmHm\Collection\TmHmSeismic_Toss.cs" />
+    <Compile Include="TmHm\Collection\TmHmSelf_Destruct.cs" />
+    <Compile Include="TmHm\Collection\TmHmSharpen.cs" />
+    <Compile Include="TmHm\Collection\TmHmSing.cs" />
+    <Compile Include="TmHm\Collection\TmHmSkull_Bash.cs" />
+    <Compile Include="TmHm\Collection\TmHmSky_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmSlam.cs" />
+    <Compile Include="TmHm\Collection\TmHmSlash.cs" />
+    <Compile Include="TmHm\Collection\TmHmSleep_Powder.cs" />
+    <Compile Include="TmHm\Collection\TmHmSludge.cs" />
+    <Compile Include="TmHm\Collection\TmHmSmog.cs" />
+    <Compile Include="TmHm\Collection\TmHmSmokescreen.cs" />
+    <Compile Include="TmHm\Collection\TmHmSoft_Boiled.cs" />
+    <Compile Include="TmHm\Collection\TmHmSolar_Beam.cs" />
+    <Compile Include="TmHm\Collection\TmHmSonic_Boom.cs" />
+    <Compile Include="TmHm\Collection\TmHmSpike_Cannon.cs" />
+    <Compile Include="TmHm\Collection\TmHmSplash.cs" />
+    <Compile Include="TmHm\Collection\TmHmSpore.cs" />
+    <Compile Include="TmHm\Collection\TmHmStomp.cs" />
+    <Compile Include="TmHm\Collection\TmHmStrength.cs" />
+    <Compile Include="TmHm\Collection\TmHmString_Shot.cs" />
+    <Compile Include="TmHm\Collection\TmHmStruggle.cs" />
+    <Compile Include="TmHm\Collection\TmHmStun_Spore.cs" />
+    <Compile Include="TmHm\Collection\TmHmSubmission.cs" />
+    <Compile Include="TmHm\Collection\TmHmSubstitute.cs" />
+    <Compile Include="TmHm\Collection\TmHmSupersonic.cs" />
+    <Compile Include="TmHm\Collection\TmHmSuper_Fang.cs" />
+    <Compile Include="TmHm\Collection\TmHmSurf.cs" />
+    <Compile Include="TmHm\Collection\TmHmSwift.cs" />
+    <Compile Include="TmHm\Collection\TmHmSwords_Dance.cs" />
+    <Compile Include="TmHm\Collection\TmHmTackle.cs" />
+    <Compile Include="TmHm\Collection\TmHmTail_Whip.cs" />
+    <Compile Include="TmHm\Collection\TmHmTake_Down.cs" />
+    <Compile Include="TmHm\Collection\TmHmTeleport.cs" />
+    <Compile Include="TmHm\Collection\TmHmThrash.cs" />
+    <Compile Include="TmHm\Collection\TmHmThuder_Wave.cs" />
+    <Compile Include="TmHm\Collection\TmHmThunder.cs" />
+    <Compile Include="TmHm\Collection\TmHmThunderbolt.cs" />
+    <Compile Include="TmHm\Collection\TmHmThunder_Punch.cs" />
+    <Compile Include="TmHm\Collection\TmHmThunder_Shock.cs" />
+    <Compile Include="TmHm\Collection\TmHmToxic.cs" />
+    <Compile Include="TmHm\Collection\TmHmTransform.cs" />
+    <Compile Include="TmHm\Collection\TmHmTri_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmTwineedle.cs" />
+    <Compile Include="TmHm\Collection\TmHmVice_Grip.cs" />
+    <Compile Include="TmHm\Collection\TmHmVine_Whip.cs" />
+    <Compile Include="TmHm\Collection\TmHmWaterfall.cs" />
+    <Compile Include="TmHm\Collection\TmHmWater_Gun.cs" />
+    <Compile Include="TmHm\Collection\TmHmWhirlwind.cs" />
+    <Compile Include="TmHm\Collection\TmHmWing_Attack.cs" />
+    <Compile Include="TmHm\Collection\TmHmWithdraw.cs" />
+    <Compile Include="TmHm\Collection\TmHmWrap.cs" />
+    <Compile Include="TmHm\TmHm.cs" />
+    <Compile Include="Trainer.cs" />
+    <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="ChoseFight.resx">
+      <DependentUpon>ChoseFight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoseSinglePokemon.resx">
+      <DependentUpon>ChoseSinglePokemon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemSelection.resx">
+      <DependentUpon>ItemSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SwapPkmForm.resx">
+      <DependentUpon>SwapPkmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\ItemTable.csv" />
+    <None Include="Resources\PkmTable.csv" />
+    <None Include="Resources\TmTable.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all-pokemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kalimba.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
